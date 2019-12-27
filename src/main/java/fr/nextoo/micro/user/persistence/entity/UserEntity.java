@@ -1,12 +1,16 @@
 package fr.nextoo.micro.user.persistence.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+@Entity
+@Table(name = "users")
 public class UserEntity {
 
     @Id
-    private long id;
+    private Long id;
 
     @NotNull
     private String username;
@@ -14,11 +18,11 @@ public class UserEntity {
     @NotNull
     private String password;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,6 +1,7 @@
 package fr.nextoo.micro.user.controller;
 
 import fr.nextoo.micro.user.business.UserBusiness;
+import fr.nextoo.micro.user.dto.UserDto;
 import fr.nextoo.micro.user.persistence.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class UserController {
     private UserBusiness userBusiness;
 
     @GetMapping
-    public List<UserEntity> getUsers(){
+    public List<UserDto> getUsers(){
         return userBusiness.getAll();
     }
 }

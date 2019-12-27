@@ -15,7 +15,7 @@ import java.util.List;
 public class UserBusiness {
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
 
     public List<UserDto> getAll() {
         return new ArrayList<>(UserTransformer.entityToDto(userRepository.findAll()));
